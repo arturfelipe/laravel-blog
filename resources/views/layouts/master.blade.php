@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +18,20 @@
   <body>
     @include ('layouts.nav')
 
-    @yield ('content')
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">Laravel Blog Tutorial</h1>
+        <p class="lead blog-description">An example blog built with Laravel 5.4 and Bootstrap 4 Alpha.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        @yield ('content')
+
+        @include ('layouts.sidebar')
+      </div>
+    </div>
 
     @include ('layouts.footer')
 
